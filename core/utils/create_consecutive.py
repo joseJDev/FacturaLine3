@@ -1,8 +1,6 @@
 """ Funcion para generar consecutivos de la factura """
 
-# Models 
-from pickle import TRUE
-from tkinter import N
+# Models
 from apps.factura.models import FactureLine
 
 
