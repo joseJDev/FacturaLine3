@@ -1,0 +1,1 @@
+web: gunicorn FacturaLine3.config.wsgi --log-file -
