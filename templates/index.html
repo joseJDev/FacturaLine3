@@ -42,16 +42,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'factura:home' %}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="{% url 'factura:home' %}">
                 <div class="sidebar-brand-icon ">
-                    <img src="{% static 'img/facturaline.png' %}" alt="" style="zoom: 30%;"  >
+                    <img src="{% static 'img/logo.svg' %}" alt=""  width="150px" height="150px">
                 </div>
-                <div class="sidebar-brand-text mx-3">Factura-Line <sup>v1</sup></div>
             </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'factura:home' %}">
@@ -166,17 +161,10 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-shopping-cart"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="{% url 'logout' %}">
+                                <i class="fas fa-sign-out-alt"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                               
-                            </div>
                         </li>
                         <div class="topbar-divider d-none d-sm-block"></div>
 

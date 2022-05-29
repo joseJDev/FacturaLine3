@@ -93,7 +93,7 @@ class CreateFinancialBoxView(View):
             cleaned_data = form.cleaned_data
             
             # Guardar registro de pago
-            cleaned_data['n_consecutive'] = create_consective(PaymentsFacture)
+            cleaned_data['n_consecutive'] = create_consective(PaymentsFacture, 'payment')
             facuture_payment = PaymentsFacture.objects.create(**cleaned_data)
 
             # Actualizar saldo

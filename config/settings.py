@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'apps.factura',
+    'apps.user',
 ]
 
 MIDDLEWARE = [
@@ -105,6 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
+AUTH_USER_MODEL = "user.User"
+
 LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'America/Bogota'
@@ -115,6 +118,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = "/login/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

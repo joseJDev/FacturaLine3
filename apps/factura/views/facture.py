@@ -87,7 +87,7 @@ class GenerateQuotes(View):
             cleaned_data = form.cleaned_data
 
             # Crear consecutivo
-            n_invoice = create_consective(FactureLine)
+            n_invoice = create_consective(FactureLine, 'invoice')
             cleaned_data['n_invoice'] = n_invoice
 
             # Guardar info factura
