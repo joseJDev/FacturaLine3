@@ -37,8 +37,6 @@ function generateQuotes(){
     });
 
     const arrayString = JSON.stringify(productsArray)
-    console.log(arrayString)
-    console.log(typeof(arrayString))
 
     $.ajax({
         data: {
@@ -47,25 +45,26 @@ function generateQuotes(){
             'quota': $('#quote').val(),
             'discount': $('#discount').val(),
             'doc_patient': $('#docPatient').val(),
+            'observation': $('#observationClient').val(),
             'fullname_patient': $('#namePatient').val(),
             'csrfmiddlewaretoken': $("[name='csrfmiddlewaretoken']").val()
         },
         url: '/facture-gen-quotes/',
         type: 'POST',
         success: function (response){
-            url = response['url_facture'];
-            let win =  window.open(url, '_blank');
-            win.focus();
-            clearValuesInput();
-            clearStorage()
-            listTableProducts();
-            calculateTotal();
-            clearElements();
+            // url = response['url_facture'];
+            // let win =  window.open(url, '_blank');
+            // win.focus();
+            // clearValuesInput();
+            // clearStorage()
+            // listTableProducts();
+            // calculateTotal();
+            // clearElements();
 
-            /* Alerta para redirigir a pagos */
-            setTimeout(() => {
-                alertPayment(response['url_payment']);
-            }, 3000);
+            // /* Alerta para redirigir a pagos */
+            // setTimeout(() => {
+            //     alertPayment(response['url_payment']);
+            // }, 3000);
 
         },
         error: function(error){
