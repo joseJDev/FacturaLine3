@@ -37,8 +37,6 @@ function generateQuotes(){
     });
 
     const arrayString = JSON.stringify(productsArray)
-    console.log(arrayString)
-    console.log(typeof(arrayString))
 
     $.ajax({
         data: {
@@ -47,6 +45,7 @@ function generateQuotes(){
             'quota': $('#quote').val(),
             'discount': $('#discount').val(),
             'doc_patient': $('#docPatient').val(),
+            'observation': $('#observationClient').val(),
             'fullname_patient': $('#namePatient').val(),
             'csrfmiddlewaretoken': $("[name='csrfmiddlewaretoken']").val()
         },
